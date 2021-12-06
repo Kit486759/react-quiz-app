@@ -70,7 +70,6 @@ export default function Questions() {
 
   return (
     <div>
-      This is questions page
       {!isFinish && <Question data={question} handleSubmit={handleSubmit} />}
       {isFinish && (
         <div>
