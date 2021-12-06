@@ -74,7 +74,7 @@ export default function Questions() {
       {isFinish && (
         <div>
           <p>You finished all questions!! The final score is {user.score}</p>
-          <Link to="/">Back to leaderboard</Link>
+          <Link to="/react-quiz-app">Back to leaderboard</Link>
         </div>
       )}
     </div>
