@@ -8,7 +8,7 @@ function App() {
   return (
   <Router>
     <Routes>
-      <Route path="/" element={<Index/>} />
+      <Route path="/react-quiz-app" element={<Index/>} />
       <Route path="/question" element={<Questions/>} />
     </Routes>
   </Router>
