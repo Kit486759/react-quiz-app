@@ -1,18 +1,35 @@
 import React, { useState } from "react";
 import Question from "../question/Question";
 import Data from "../data/Data";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { userSlice } from "../store/store";
 
 export default function Questions() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state);
+  const user = useSelector(userSlice);
   const [isFinish, setIsFinish] = useState(false);
   const [question, setQuestion] = useState(Data[0]);
   const [questionIndex, setQuestionIndex] = useState(0);
-//   const [score, setScore]
 
-//   console.log(Data);
-//   console.log(user);
+  console.log(Data);
+  console.log(user);
+  console.log(isFinish)
+  
+  console.log(questionIndex);
+
+  const saveScore = () => {
+    let scoreList = [];
+    if (localStorage.getItem("score") === null) {
+      scoreList.push(user)
+      console.log(scoreList)
+      JSON.stringify(localStorage.setItem("score", JSON.stringify(scoreList)));
+    } else {
+      scoreList = JSON.parse(localStorage.getItem("score"))
+      scoreList.push(user)
+      JSON.stringify(localStorage.setItem("score", JSON.stringify(scoreList)));
+    }
+  };
 
   const scoreResult = () => {
     let score = 0;
@@ -22,13 +39,15 @@ export default function Questions() {
       }
     }
     dispatch({ type: "finalScore", payload: score });
+    saveScore();
   };
 
   const handleSubmit = (e) => {
     if (user.answer.length === Data.length) {
       console.log("over");
       setIsFinish(true);
-      return scoreResult();
+      scoreResult();
+      return dispatch({type:"reset"})
     }
     console.log(Data.length);
     console.log(user.answer.length);
@@ -53,7 +72,12 @@ export default function Questions() {
     <div>
       This is questions page
       {!isFinish && <Question data={question} handleSubmit={handleSubmit} />}
-      {isFinish && <p>No more questions, your final score is {user.score}</p>}
+      {isFinish && (
+        <div>
+          <p>You finished all questions!! The final score is {user.score}</p>
+          <Link to="/">Back to leaderboard</Link>
+        </div>
+      )}
     </div>
   );
 }

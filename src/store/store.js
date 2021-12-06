@@ -14,16 +14,26 @@ const userReducer = (state = userStat, action) => {
       answer: [...state.answer, action.payload],
     };
   }
-  if(action.type === "finalScore"){
+  if (action.type === "finalScore") {
     return {
-        ...state,
-        score: action.payload
-      };
+      ...state,
+      score: action.payload,
+    };
   }
-
+  if (action.type === "reset") {
+    return (state = userStat);
+  }
+  if (action.type === "setName") {
+    return {
+      ...state,
+      name:action.payload
+    }
+  }
   return state;
 };
 
 const store = createStore(userReducer);
+
+export const userSlice = (state) => state;
 
 export default store;
