@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Kit486759/react-quiz-app.git/static/css/main.a617e044.chunk.css",
+    "main.js": "/Kit486759/react-quiz-app.git/static/js/main.4f1c6dcc.chunk.js",
+    "main.js.map": "/Kit486759/react-quiz-app.git/static/js/main.4f1c6dcc.chunk.js.map",
+    "runtime-main.js": "/Kit486759/react-quiz-app.git/static/js/runtime-main.ca12feaa.js",
+    "runtime-main.js.map": "/Kit486759/react-quiz-app.git/static/js/runtime-main.ca12feaa.js.map",
+    "static/js/2.532f8a61.chunk.js": "/Kit486759/react-quiz-app.git/static/js/2.532f8a61.chunk.js",
+    "static/js/2.532f8a61.chunk.js.map": "/Kit486759/react-quiz-app.git/static/js/2.532f8a61.chunk.js.map",
+    "static/js/3.d860bbcd.chunk.js": "/Kit486759/react-quiz-app.git/static/js/3.d860bbcd.chunk.js",
+    "static/js/3.d860bbcd.chunk.js.map": "/Kit486759/react-quiz-app.git/static/js/3.d860bbcd.chunk.js.map",
+    "index.html": "/Kit486759/react-quiz-app.git/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/Kit486759/react-quiz-app.git/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.532f8a61.chunk.js.LICENSE.txt": "/Kit486759/react-quiz-app.git/static/js/2.532f8a61.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca12feaa.js",
+    "static/js/2.532f8a61.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.4f1c6dcc.chunk.js"
+  ]
+}
